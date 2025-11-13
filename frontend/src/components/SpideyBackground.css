@@ -1,0 +1,81 @@
+/* Premium SpiderVerse Gradient */
+.spideyverse-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -2;
+  background-image: url('https://clipart-library.com/new_gallery/44-442203_download-spider-and-transparent-spider-web-transparent-background.png'),
+    radial-gradient(circle at 20% 20%, #1a002d, #0f0c29, #000000);
+  animation: pulseBg 10s infinite alternate ease-in-out;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center;
+  background-size: 60vmax, cover;
+}
+
+@keyframes pulseBg {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.25); }
+}
+
+/* Floating ambient web particles */
+.ambient-web {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffffff15;
+  border-radius: 50%;
+  animation: floatWeb 8s infinite ease-in-out;
+}
+
+@keyframes floatWeb {
+  0% { transform: translateY(0) scale(1); opacity: 0.5; }
+  50% { transform: translateY(-60px) scale(1.4); opacity: 0.9; }
+  100% { transform: translateY(0) scale(1); opacity: 0.5; }
+}
+
+/* Click Burst - Spiderweb Effect */
+.web-burst {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff25 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  animation: webExpand 0.8s ease-out forwards;
+  filter: blur(1px);
+}
+
+@keyframes webExpand {
+  0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0.5; }
+  70% { opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
+}
+
+/* Elite Spiders with Glow */
+.spider-elite {
+  position: absolute;
+  width: 45px;
+  pointer-events: none;
+  animation: spiderRun 3.5s linear forwards;
+  filter: drop-shadow(0 0 10px #9400ffcc);
+}
+
+@keyframes spiderRun {
+  0% {
+    transform: translate(0, 0) scale(0.4);
+    opacity: 1;
+  }
+  10% {
+    transform: translate(0,0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(var(--dx), var(--dy)) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(1);
+    opacity: 0;
+  }
+}
