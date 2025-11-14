@@ -28,17 +28,20 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #9400ff;
+    margin-left: 12rem;
 }
 
 .team__detail-description p {
     line-height: 1.7;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
 .team__detail-description small {
     display: block;
     opacity: 0.6;
     font-style: italic;
+    margin-left: 10rem;
 }
 
 .team__container {
@@ -81,6 +84,9 @@
 .detail-view-active .team-member.selected {
     transform: scale(1.05);
     box-shadow: 0 0 30px #9400ff88;
+    margin-top: -13rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
 }
 
 @media (max-width: 767px) {
